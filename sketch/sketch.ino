@@ -83,9 +83,7 @@ bool menu(){
            }
             
           }
-}
-
-  
+}  
 
 String criaSenha(){
   lcd.setCursor(5,1);
@@ -116,7 +114,6 @@ String criaSenha(){
 }
 
 bool confereSenha(String senha){
-  
   lcd.clear();
   lcd.setCursor(0,0);
   lcd.print(">>SENHA: [____]");
@@ -170,14 +167,9 @@ String redefinir(){
   return senha;
 }
 
-
-
-
 //PRINCIPAL
 void setup(){
-
   Serial.begin(9600);
-
   lcd.begin(16, 2);
   myservo.attach(6,600,2300);
   myservo.write(FECHADO);
@@ -197,19 +189,15 @@ void setup(){
 
   lcd.setCursor(5,1);
   lcd.print("[____]");
-  delay(100);
-  
-  
+  delay(100); 
   lcd.setCursor(1, 0);
   String txt = ">>NOVA SENHA<<";
   for (byte i = 0; i < txt.length(); i++) {
     lcd.print(txt[i]);
     delay(100);
   }
- 
+
   senha = criaSenha();
-
-
 }
   
 void loop(){ 
@@ -234,4 +222,3 @@ void loop(){
   }
 }
 }
-  
