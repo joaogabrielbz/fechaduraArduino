@@ -29,11 +29,9 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rPins, cPins, LINHAS, COLUNAS
 //PAINEL
 LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
 
-
 //VARIAVEIS
 String senha;
 bool senhaCriada = false;
-
 
 //METODOS
 void trancado(){
